@@ -24,27 +24,26 @@ View(housesales)
 # 1) The column "year" indicates the year. Filter to return only results from 2015. 
 # (note that because the column is numeric, you wouldn't use quotes as with text when setting your filter value)
 
-
-
+filter(housesales, year == 2015)
 
 
 # 2) Similar to the above question, filter results from 2010 onward, so 2010-2015.
 
 
-
+filter(housesales, Year >= 2010 & Year <= 2015)
 
 
 # 3) The "city" column contains the relevant city. Filter to return only results for Houston
 # (note, remember R is case sensitive)
 
-
+filter(housesales,city == "Houston")
 
 
 
 # 4) Filter for only where the city is Houston as above, and now also filter for only 
 # the year 2010. The results should give you 12 records, one for each month in 2010 for Houston.
 
-
+filter(housesales,city == "Houston",year == 2010)
 
 
 
@@ -54,6 +53,7 @@ View(housesales)
 
 
 
+filter(housesales,city == "Houston",year == 2010,arrange(desc("sales")))
 
 
 # 6) Piggyback on what you've done above. 
