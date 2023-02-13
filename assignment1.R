@@ -53,12 +53,13 @@ filter(housesales,city == "Houston",year == 2010)
 
 
 
-filter(housesales,city == "Houston",year == 2010,arrange(desc("sales")))
+filter(housesales,city == "Houston",year == 2010,arrange(desc(sales)))
 
 
 # 6) Piggyback on what you've done above. 
 # Do the same as #5, only this time instead of Houston return records for Dallas
 
+filter(housesales,city == "Dallas",year == 2010,arrange(desc(sales)))
 
 
 
@@ -72,7 +73,7 @@ filter(housesales,city == "Houston",year == 2010,arrange(desc("sales")))
 #
 # Filter for the city is Dallas, and the month is June (the number 6). 
 
-
+filter(housesales, city == "Dallas", month == 6)
 
 
 
@@ -80,12 +81,13 @@ filter(housesales,city == "Houston",year == 2010,arrange(desc("sales")))
 # arrange the results by sales from highest-to-lowest to show what year had the highest June sales.
 
 
-
+filter(housesales, city == "Dallas", month == 6, arrange(desc(sales)))
 
 
 
 # 9) Now do the same as Question 8, but this time instead of Dallas, show results for Corpus Christi
 
+filter(housesales, city == "Corpus Christi", month == 6, arrange(desc(sales)))
 
 
 
