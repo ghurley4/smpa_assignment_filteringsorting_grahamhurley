@@ -96,3 +96,5 @@ filter(housesales, city == "Corpus Christi", month == 6, arrange(desc(sales)))
 # 10) Finally, using the Corpus Christi code from Question 9, instead of June
 # use the month of February (2) instead.
 
+filter(housesales, city == "Corpus Christi", month == 2, arrange(desc(sales)))
+
